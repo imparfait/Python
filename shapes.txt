@@ -1,0 +1,4 @@
+Square x:0 y:0 side:10
+RectangleShape x:5 y:5 width:20 height:15
+CircleShape x:10 y:10 radius:7
+Ellipse x:3 y:3 width:14 height:10
