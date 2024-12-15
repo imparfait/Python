@@ -1,53 +1,53 @@
 import math
 from abc import ABC, abstractmethod
 
-# class Figure:
-#     def area(self):
-#         raise NotImplementedError("Subclasses must implement the area method")
-#     def __int__(self):
-#         return int(self.area())
-#     def __str__(self):
-#         return f"Figure with area: {self.area()}"
-# class Rectangle(Figure):
-#     def __init__(self, width, height):
-#         self.width = width
-#         self.height = height
-#     def area(self):
-#         return self.width * self.height
-#     def __str__(self):
-#         return f"Rectangle with width: {self.width}, height: {self.height}, area: {self.area()}"
-# class Circle(Figure):
-#     def __init__(self, radius):
-#         self.radius = radius
-#     def area(self):
-#         return math.pi * self.radius ** 2
-#     def __str__(self):
-#         return f"Circle with radius: {self.radius}, area: {self.area():.2f}"
-# class Triangle(Figure):
-#     def __init__(self, base, height):
-#         self.base = base
-#         self.height = height
-#     def area(self):
-#         return 0.5 * self.base * self.height
-#     def __str__(self):
-#         return f"Triangle with base: {self.base}, height: {self.height}, area: {self.area()}"
-# class Trapezoid(Figure):
-#     def __init__(self, base1, base2, height):
-#         self.base1 = base1
-#         self.base2 = base2
-#         self.height = height
-#     def area(self):
-#         return 0.5 * (self.base1 + self.base2) * self.height
-#     def __str__(self):
-#         return f"Trapezoid with bases: {self.base1}, {self.base2}, height: {self.height}, area: {self.area()}"
+class Figure:
+    def area(self):
+        raise NotImplementedError("Subclasses must implement the area method")
+    def __int__(self):
+        return int(self.area())
+    def __str__(self):
+        return f"Figure with area: {self.area()}"
+class Rectangle(Figure):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width * self.height
+    def __str__(self):
+        return f"Rectangle with width: {self.width}, height: {self.height}, area: {self.area()}"
+class Circle(Figure):
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return math.pi * self.radius ** 2
+    def __str__(self):
+        return f"Circle with radius: {self.radius}, area: {self.area():.2f}"
+class Triangle(Figure):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+    def area(self):
+        return 0.5 * self.base * self.height
+    def __str__(self):
+        return f"Triangle with base: {self.base}, height: {self.height}, area: {self.area()}"
+class Trapezoid(Figure):
+    def __init__(self, base1, base2, height):
+        self.base1 = base1
+        self.base2 = base2
+        self.height = height
+    def area(self):
+        return 0.5 * (self.base1 + self.base2) * self.height
+    def __str__(self):
+        return f"Trapezoid with bases: {self.base1}, {self.base2}, height: {self.height}, area: {self.area()}"
 
-# figures = [
-#     Rectangle(6, 10),
-#     Triangle(10, 15),
-#     Trapezoid(10, 10, 7)
-# ]
-# for figure in figures:
-#     print(figure)
+figures = [
+    Rectangle(6, 10),
+    Triangle(10, 15),
+    Trapezoid(10, 10, 7)
+]
+for figure in figures:
+    print(figure)
 
 class Shape(ABC):
     def show(self):
