@@ -34,8 +34,11 @@ def check_passwords(password):
         print("Password is secure.")
     return isWeak
 
+def see_password(username):
+    print(f"\nUsername: {username}\nUser's password: {users[username]}")
+
 while True:
-    print("\n1. Add User\n2. Delete User\n3. Change Password\n4. Exit")
+    print("\n1. Add User\n2. Delete User\n3. Change Password\n4. See Password \n5. Exit")
     choice = input("Choose an option: ")
     if choice == "1":
         u = input("Enter username: ")
@@ -51,6 +54,9 @@ while True:
         pNew = input("Enter new password: ")
         change_password(u, p,pNew)
     elif choice == "4":
+        u = input("Enter username: ")
+        see_password(u)
+    elif choice == "5":
         print("Goodbye!")
         break
     else:
